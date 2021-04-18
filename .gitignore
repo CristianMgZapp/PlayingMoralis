@@ -19,3 +19,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+./contracts/wallet.pem
+node_modules
+wallet.pem
+

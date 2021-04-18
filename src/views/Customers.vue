@@ -36,16 +36,15 @@ export default {
       user: "",
     };
   },
-
-  mounted() {
-    const plugin = document.createElement("script");
-    plugin.setAttribute(
-      "src",
-      "//npmcdn.com/@elrondnetwork/erdjs@4.0.3/out-browser/erdjs.js"
-    );
-    plugin.async = true;
-    document.head.appendChild(plugin);
-  },
+  // mounted() {
+  //   const plugin = document.createElement("script");
+  //   plugin.setAttribute(
+  //     "src",
+  //     "//npmcdn.com/@elrondnetwork/erdjs@4.0.3/out-browser/erdjs.js"
+  //   );
+  //   plugin.async = true;
+  //   document.head.appendChild(plugin);
+  // },
   components: {},
   methods: {
     // goToDetailsPage: function (id) {
@@ -67,10 +66,10 @@ export default {
       } catch (error) {
         this.$log.error("error when user is login", error);
       }
-    }, 
- 
+    },
+
     handleAuthSuccess: function (user) {
-      this.user = user
+      this.user = user;
       this.$log.debug("logged in user:", this.user);
     },
     handleErrorLogin: function (error) {
